@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+    <title> {{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+          function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+          }({
+              instrumentationKey:"1443c53b-e447-48c5-a88e-0a8bfddc9b20"
+          });
+             
+          window.appInsights=appInsights;
+          appInsights.trackPageView();
+      </script>
+</head>
+
+<body>
+
+    <div class="markdown-body">
+
+        <!-- ヘッド -->
+        <header>
+            <h1 class="header">{{ page.title | default: site.github.repository_name }}</h1>
+            <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
+        </header>
+
+        <hr />
+        <!--  Markdown の本体 -->
+        <section>
+            {{ content }}
+        </section>
+
+        <hr />
+
+        <footer>
+            <p><a class="buttons github" href="{{ site.github.repository_url }}">View On GitHub</a></p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
