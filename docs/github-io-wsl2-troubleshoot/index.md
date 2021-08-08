@@ -16,6 +16,8 @@ wrong number of arguments (given 4, expected 1)
 ```
 手順では ruby2.5 と ruby2.5-dev をインストールしていましたが、ruby2.5 は現時点で EOL になっていたこともあり、ruby2.7 に入れ替えてみることにしました。いったん ruby2.5 と ruby2.5-dev を削除してから ruby2.7 と ruby2.7-dev をインストールしたところ、上記エラーは解消しました。根本的なエラー原因はわからなかったのですが、いろいろ調べてみた限りだと、ruby と gem のバージョンの相性の問題のような気がしています。
 
+現在、ruby のバージョンは「2.7.2p137」で、gem のバージョンは「3.1.4」となっています。
+
 ## bundle update でエラー
 jekyll new した後で Gemfile を少し変えてから bundle update したときにエラーになった (エラーの詳細は忘れました) のですが、どうやら jekyll new したときにできた Gemfile.lock が悪さをしていたみたいで、いったん Gemfile.lock (.lock が付く方のファイル) を削除してから bundle update しなおすと成功しました。
 
